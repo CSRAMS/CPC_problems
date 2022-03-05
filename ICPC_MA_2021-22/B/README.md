@@ -25,7 +25,6 @@ the value of that bit from the number if it is set.  This is a variant of a stan
      }  
  
  Asserting that we check 8,4,2,1 rather than using the general algorithm is one of several approaches to ensuring that we include leading zeros for the output.
- An alternative approach for binary conversion could be to use a case-switch/dictionary, returning a different array for each of the 10 possible digits as there are
- only 10 possible configurations.  
+ An alternative approach for binary conversion could be to use a case-switch/dictionary, returning a different array for each of the 10 possible digits -- is practical in this case because there are only 10 possible cases.
  
  It was important to be mindful of the exact spacing specifications described for the output. 
