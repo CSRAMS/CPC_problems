@@ -19,10 +19,10 @@ the value of that bit from the number if it is set.  This is a variant of a stan
  
  Given a number n and an array a to store binary digits:
  
-  for(i=0;n>0;i++) {    
-    a[i]=n%2;    
-    n=n/2;    
-  }  
+     for(i=0;n>0;i++) {    
+         a[i]=n%2;    
+         n=n/2;    
+     }  
  
  Asserting that we check 8,4,2,1 rather than using the general algorithm is one of several approaches to ensuring that we include leading zeros for the output.
  An alternative approach for binary conversion could be to use a case-switch/dictionary, returning a different array for each of the 10 possible digits as there are
