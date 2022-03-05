@@ -1,6 +1,6 @@
 [Full problem description](https://mausa21.kattis.com/problems/espresso)
 
-**Problem Type**: Ad-hoc
+**Problem Type**: Ad-hoc  
 **Problem Difficulty Estimate**: Easy
 
 **Input**: Water tank size in oz, a number of espresso orders, and a list of order sizes (in oz's of water).
