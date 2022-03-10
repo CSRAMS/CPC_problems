@@ -72,10 +72,8 @@ public class J {
                 works = false;
                 break outerloop;
             }
-            else{out = "8 9";}
-            
+            else{out = "8 9";}   
         }
-
         if(works){
             System.out.println(out);
         }
