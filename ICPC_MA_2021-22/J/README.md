@@ -9,12 +9,12 @@
 
 **Approach**: A brute-force enumeration of the possible arrangements of cards can be done here, as there are only 6 given the constraints:
 
-  AABB: Bob's cards can only be determined if Alice's second card is 7.
-  ABBA: Alice's cards must have a difference of 3, as Bob's can only be determined if there are two slots between them.  
-  ABAB: Alice's cards must be 6 and 8.
-  BABA: Alice's cards must be 2 and 4.  
-  BBAA: Alice's first card must be 3.
-  BAAB: Alice's cards must be 2 and 8.
+  AABB: Bob's cards can only be determined if Alice's second card is 7.  
+  ABBA: Alice's cards must have a difference of 3, as Bob's can only be determined if there are two slots between them.    
+  ABAB: Alice's cards must be 6 and 8.  
+  BABA: Alice's cards must be 2 and 4.    
+  BBAA: Alice's first card must be 3.  
+  BAAB: Alice's cards must be 2 and 8.  
   
   **Thoughts on generalizing**  
   This problem could be generalized to a larger numbers of cards, possible arrangements, etc. with the pigeonhole principle: 
