@@ -17,7 +17,7 @@ Here we parsed input digits using division and modulus (could also parse from St
 on the clock face) by iteratively dividing the number by 2,checking if it is >8,4,2,1 to determine whether each of these bits should be set, and then subtracting
 the value of that bit from the number if it is set.  This is a variant of a standard algorithm for converting decimal to binary:
  
- Given a number n and an array a to store binary digits:
+ Given a decimal number n and an array a to store binary digits:
  
      for(i=0;n>0;i++) {    
          a[i]=n%2;    
