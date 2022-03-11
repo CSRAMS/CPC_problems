@@ -14,7 +14,7 @@ hth smallest contained the substring p.
 
 The challenging part of this problem was determining an upper bound, `n` for the Sieve of Eratosthenes, since we don't know how large the hth smallest
 prime is.  The prime number theorem (which can be found in most discrete math textbooks) helps with this.  It states that the number of primes <= a given
-number N is ~N/ln(N).  This formula is an approximation, and is nontrivial to solve for N, but we can very quickly get a good idea of what N should be 
+number, N is ~N/ln(N).  This formula is an approximation, and is nontrivial to solve for N, but we can very quickly get a good idea of what N should be 
 by plugging numbers into a calculator.  We plugged in some numbers and got a good highball result (better safe than sorry unless timeout is very strict)
 for N=2000000 of 137848.  This passed.  If you ever wanted to build a real application to generate primes, it would be more efficient to have some kind
 of dynamic resizing for N based on l and h, but in these problems this is unecessary, as everything passes if the most time-consuming case passes.
