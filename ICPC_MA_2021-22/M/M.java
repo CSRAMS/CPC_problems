@@ -25,11 +25,9 @@ public class M {
         for (int [] i: input){
             if (i[0]>curTime) {
                 lag+=(i[0]-curTime);  
-                curTime+=((i[0]-curTime)+1);
+                curTime+=(i[0]-curTime);
             } 
-            else {
-                curTime+=1;
-            }
+            curTime+=1;  
         }
         System.out.println(lag);
     }
