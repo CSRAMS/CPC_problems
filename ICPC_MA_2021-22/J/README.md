@@ -16,7 +16,7 @@
   BBAA: Alice's first card must be 3.
   BAAB: Alice's cards must be 2 and 8.
   
-  **Thoughts on generalizing**
+  **Thoughts on generalizing**  
   This problem could be generalized to a larger numbers of cards, possible arrangements, etc. with the pigeonhole principle: 
   The number of slots which unkown cards could occupy (i.e. distances between known cards, boundaries) must not exceed the number of unknown cards.
   If possible arrangements are too great to manually enumerate, they could be enumerated via recursive backtracking. 
