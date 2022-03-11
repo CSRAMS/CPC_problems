@@ -1,6 +1,6 @@
 [Full problem description](https://mausa21.kattis.com/problems/bracketpairing)
 
-#Incomplete - solution is algorithmically sound but too slow.
+**Incomplete - solution is algorithmically sound but too slow.**
 
 **Problem Topics**: Stack, recursive backtracking  
 **Problem Difficulty Estimate**: Medium-hard
