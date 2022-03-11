@@ -1,6 +1,6 @@
 [Full problem description](https://mausa21.kattis.com/problems/subprime)
 
-**Problem Topics**: Generating primes, Sieve of Eratosthenes, Prime number theorem 
+**Problem Topics**: Generating primes, Sieve of Eratosthenes, Prime number theorem   
 **Problem Difficulty Estimate**: Easy-Medium
 
 **Input**: Lower and upper bound of primes to search in, substring to search for.
