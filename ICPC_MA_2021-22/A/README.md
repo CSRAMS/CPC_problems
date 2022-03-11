@@ -1,15 +1,12 @@
-[Full problem description](https://mausa21.kattis.com/problems/concertrehearsal)
+[Full problem description](https://mausa21.kattis.com/problems/espresso)
 
-**Incomplete -- Solution is probably algorithmically sound, but way too slow.  Based on the constraints, some kind of mathematical shortcut is
-necessary**
+**Problem Topics**: Ad-hoc  
+**Problem Difficulty Estimate**: Easy
 
-**Problem Topics**: Number theory? Modular arithmetic
-**Problem Difficulty Estimate**: Hard?
+**Input**: Water tank size in oz, a number of espresso orders, and a list of order sizes (in oz's of water).
 
-**Input**: Number of students, time concert hall is open per day, number of days.
+**Output**: Give how many times the tank needs to be refilled if the tank *must* be refilled every time the next order exceeds the amount of water left, 
+and if the orders are filled in the same sequence given in the input.
 
-**Output**: How many full rehearsal passes can the class complete in k days?
-
-**Approach**: In competition we tried the above solution, which repeatedly iterates through student performances for the total number of days, given
-that they stop for the day if there isn't enough time for the next performance.  This got a TLE -- there can be up to 10 billion days with a CPU time
-limit of 1 second -- some kind of mathematical shortcut is necessary.
+**Approach**: We simply iterate through the orders and keep track of how much water is left in the tank.  If the upcoming order exceeds the amount of water left,
+we refill the tank, increment the number of refills, and then subtract the order size from the water remaining in the newly full tank.
