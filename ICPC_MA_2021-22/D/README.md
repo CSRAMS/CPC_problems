@@ -14,8 +14,7 @@ of cell.  The MPD largely hinges on the number of 0s and 2s in the land, since m
 Cases (with at least 2 rows and at least 2 columns):
  
    - No 0s:
-     - If there are no 0s, we can count the 2s:
-     
+   
        - If there are no 2s, the MPD is 0, as all cells are 1.
 
        - If there is one 2, all other values must be 1, making the MPD 1.  
