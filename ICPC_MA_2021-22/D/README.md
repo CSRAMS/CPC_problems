@@ -24,7 +24,7 @@ Cases (with at least 2 rows and at least 2 columns):
          2^(`num_twos`/2+1)-2^(`num_twos`/2).  (Do the prosperity score calculation for each descendent and take the difference).  
      
   - One 0: 
-    This means one descendant will have a prosperity score of 0.  We therefore want to minimize the other prosperity score as much as possible.  
+    This means one descendant will have a prosperity score of 0.  We therefore want to minimize the other prosperity score as much as possible. 
     We can do this by giving the descedent with the 0 all but a signle cell.  The other descendent will therefore either have a 1 or 2, which will 
     simply be the minimum available in the land grid.  
     
