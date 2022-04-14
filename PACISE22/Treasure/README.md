@@ -1,4 +1,4 @@
-**Problem Topics**: searching/pathfinding, Breadth-first search 
+**Problem Topics**: searching/pathfinding, Breadth-first search   
 **Problem Difficulty Estimate**: Medium
 
 This problem ended up being removed from the set due to a technical difficulty in judging, but we solved it before that, so here it is:  
