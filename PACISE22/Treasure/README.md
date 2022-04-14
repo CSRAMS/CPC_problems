@@ -1,9 +1,20 @@
 [Full problem description](https://www.codechef.com/PACE2022/problems/PACISE2_1)
 
-**Problem Topics**: Ad-hoc  
-**Problem Difficulty Estimate**: Easy
+**Problem Topics**: searching/pathfinding, Breadth-first search 
+**Problem Difficulty Estimate**: Medium
 
-**Input**: 1-19 character PACISE ID number.  
+**Input**: Mazes like this:
+
+WWWWWWWWWP
+.....WWW.X
+.WWW.WWW.W
+.WWW......
+.WWW.WWW.
+.X......W.
+W.WWWWW.W.
+W....TWW..
+WWWWW..W.W
+WWWWWW...W
 
 **Output**: Output "VALID" or "INVALID" based on the evaluation criteria given in the problem description.  
 
