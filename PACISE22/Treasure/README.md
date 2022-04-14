@@ -4,7 +4,7 @@
 **Problem Difficulty Estimate**: Medium
 
 **Input**: Mazes like this:
-
+```
 WWWWWWWWWP
 .....WWW.X
 .WWW.WWW.W
@@ -15,7 +15,7 @@ W.WWWWW.W.
 W....TWW..
 WWWWW..W.W
 WWWWWW...W
-
+```
 **Output**: Output "VALID" or "INVALID" based on the evaluation criteria given in the problem description.  
 
 **Approach**: Iterate through the digits of the number, doubling them in the specified pattern.  If a digit is doubled, we add the resultant digits to an 
