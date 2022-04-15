@@ -7,7 +7,7 @@
 **Input**:
 -An integer `p`, <= 10000 representing the number of "problems"
 - a double representing the initial radius of our sphere
-- p lines with three doubles representing the length, width, and height, respectively of a box.
+- `p` lines with three doubles representing the length, width, and height, respectively of a box.
 
 **Output**: Whether or not the problemset needs to be "rebuilt"
 
