@@ -17,7 +17,7 @@ WWWWW..W.W
 WWWWWW...W
 ```
 
-`W` characters represent impassable walls, `.` characters represent free, passable spaces, `P` represents the starting point of the player, "Pascal", `T` represents the treausure, and `X` represents and exit to the maze.  There is exactly 1 `T` and `P` in any given maze but there can be multiple `X`'s.  You have to return a valid path from Pascal to the Treasure and to an exit that is under 200 moves.  Pascal cannot leave the maze at any point.  
+`W` characters represent impassable walls, `.` characters represent free, passable spaces, `P` represents the starting point of the player, "Pascal", `T` represents the treausure, and `X` represents an exit to the maze.  There is exactly 1 `T` and `P` in any given maze but there can be multiple `X`'s.  You have to return a valid path from Pascal to the Treasure and then from the Treasure to an exit that is under 200 moves.  Pascal cannot leave the maze at any point.  
 
 **Output**: Paths are returned in the form of Strings of compass directions ('N', 'S', 'E', 'W') representing Pascal's sequence of moves.  Ex:
 
