@@ -1,7 +1,7 @@
 
 [Full problem description](https://www.codechef.com/PACE2022/problems/PACISE8/)
 
-**Problem Topics**: ad-hoc
+**Problem Topics**: ad-hoc  
 **Problem Difficulty Estimate**: Easy
 
 **Input**: Some number of input sets each with:
