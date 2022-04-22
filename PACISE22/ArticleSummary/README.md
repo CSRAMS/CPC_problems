@@ -12,5 +12,5 @@
 
 **Approach**:
 1. We instantialize a hashmap with the words as the key and the frequency as the value.
-2. For each word, increase the integer value in the dictionary. If the word is encountered for the first time, a dictionary key is initialized with a value of one.
-3. For each key in the dictionary, get the most frequent item, print the string `"<WORD> <FREQ>"` and delete the key from the dictionary.
+2. For each word, increase the integer value in the hashmap. If the word is encountered for the first time, a key is initialized with a value of one.
+3. While the hashmap is not empty, get the most frequent item, print the string `"<WORD> <FREQ>"` and delete the key from the dictionary.
