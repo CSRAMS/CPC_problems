@@ -5,7 +5,7 @@
 **Problem Difficulty Estimate**: Easy
 
 **Input**:
--An integer `p`, <= 10000 representing the number of "problems"
+- An integer `p`, <= 10000 representing the number of "problems"
 - a double representing the initial radius of our sphere
 - `p` lines with three doubles representing the length, width, and height, respectively of a box.
 
