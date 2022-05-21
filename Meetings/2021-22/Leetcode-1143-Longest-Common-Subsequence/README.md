@@ -1,6 +1,6 @@
 [Article on LCS](https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/)
 
-@auther - Nolan
+@auther - Nolan  
 Here's 3 implementations of LCS. The first, `recur_lcs` is the naive, recursive approach. Easy to think about, but not very quick. Uses `O(2^n)` time and constant space.
 
 The second implementation is a straight iterative dynamic programming approach. It is much quicker than recursive; however in Python, the overhead to create a full 2d matrix doubles the time. Uses `O(2 * (len(s1) * len(s2))` time and `O((len(s1) + 1) * (len(s2) + 1))` space. The matrix starts as a bunch of 0s, then is built from the bottom up. There is one extra row and column to avoid wraparound with the list indices. Start the loops at index 1 to avoid looping needlessly.
