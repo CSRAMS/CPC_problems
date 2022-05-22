@@ -1,0 +1,58 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww15800\viewh12860\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Delete and Earn\
+\
+For every delete operation (of nums[i]) we need to find all elements equal to nums[i]+1 and nums[i]-1, so we begin by sorting nums to make this an ~ O(1) operation rather than an O(n) operation.  Now consider the following sorted instance of nums:\
+\
+	[2,2,3,3,3,4,4,5,5,6,6,7,7,9,9,10]\
+\
+We know that a delete operation of nums[i] will delete all entries equal to nums[i]+1 and nums[i]-1, but will retain all entries equal to nums[i].  For example, if we delete the first 6, all of the fives and sevens will be removed, but all of the sixes will be retained.  Thus, there is never a case where we need to inspect groups of equal values individually as opposed to collectively, so subarrays of consecutive values can be simplified into sums of equal values:\
+\
+	2,2 -> 4 \
+`	3,3,3 -> 9\
+	4,4 -> 8 \'85etc.\
+\
+Values that are not directly consecutive to the previous index can be treated as a new subarray, as they will never be affected by the deletion of prior values in the array, and vice versa.  In this example, there is a gap between the 7\'92s and the 9\'92s, so we can break nums into two subarrays of sums of equal values: 2\'857, and 9\'8510.  This yields:\
+\
+	[4,9,8,10,12,14], [18,10]\
+\
+The problem is now reduced to finding the maximum sum of elements at nonconsecutive indices in each subarray.  This is exactly the same problem as Leetcode #198 - House Robber, which we did last week.  We want to iterate through the array and store the maximum possible sum (given the constraint of using no two consecutive indices) through the current index.  This ultimately necessitates a lookback of only 2 elements at any given point.  In the code, we store the maximum through the previous element in 
+\f1\i prev_max, 
+\f0\i0 and the maximum through the element before that as 
+\f1\i prev2_max.
+\f0\i0   Doing this on the first subarray:  \
+\
+	The maximum through the first index is 4: prev_max = 4.\
+	The maximum through the second index is 9: prev_max = 9, prev2_max = 4.  \
+	At index 3, the maximum is max(prev2_max+nums[3], prev_max).  In this case it is 	prev2_max+nums[3]=12 > prev_max =9.\
+	We save this value in 
+\f1\i cur_max 
+\f0\i0 and update prev_max and prev2_max.  By saving the maxes as we go, we only ever need to consider 3 values to determine the max at the next index:\
+\
+	[
+\f1\i prev2_max
+\f0\i0 , 
+\f1\i prev_max
+\f0\i0 , 
+\f1\i cur_max
+\f0\i0 , \'85
+\f1\i next
+\f0\i0 ]\
+\
+We know that cur_max can\'92t contribute to the max at
+\f1\i  next
+\f0\i0 , so the main question in each iteration is whether prev_max or prev2_max is greater.\
+Because we are only restricted to not using 
+\f1\i directly
+\f0\i0  consecutive indices, it never makes sense to skip more than 2 elements, thus a lookback of more than two is never required.  \
+\
+Once we\'92ve gotten the maximum sum for each subarray, we simply add them together, yielding a final result for the entire initial nums array.\
+\
+\
+\
+           }

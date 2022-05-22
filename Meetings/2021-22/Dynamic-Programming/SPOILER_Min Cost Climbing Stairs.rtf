@@ -1,0 +1,57 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Min Cost Climbing Stairs:\
+\
+We can do this in O(n) time by applying principles of dynamic programming - breaking the problem down into subproblems and saving the work as we go.  Specifically, we can save the minimum cost to reach the top of the staircase for every step, starting from the top.  Consider the following example:\
+\
+	cost =  [3,6,2,8,10,5,4]\
+\
+The cost to reach the top from index -1 can only possibly be 4, as this is the last step.  We can save this value in the variable 
+\f1\i next2 
+\f0\i0 in the code.  Next, we consider the minimum cost to reach the top from index -2.  We can take 1 or 2 steps from here.  \
+\
+	Taking 1 step gives: cost[-2]+next2 = 5+4 = 9\
+\
+	Taking 2 steps gives: cost[-2] = 5 \'97 if we take two steps we reach the top.  \
+\
+Therefore, the minimum of our two options gives a cost of 5 to reach the top of the steps from this point.  We can save this value in the variable 
+\f1\i next 
+\f0\i0 in the code.  \
+\
+Next we consider the minimum cost from index -3.  Once again, this will be the cost at the index plus the minimum cost of taking one or two steps.  We have saved the minimum cost of taking one step in 
+\f1\i next, 
+\f0\i0 and the minimum cost of taking two steps in 
+\f1\i next2.  
+\f0\i0 Therefore:\
+\
+	Min_cost(-3) = cost[-3] + min(next, next2)
+\f1\i  = 
+\f0\i0 10+min(5,4) = 14.\
+\
+We can save this value in the variable 
+\f1\i cur 
+\f0\i0 in the code, and update 
+\f1\i next2
+\f0\i0  to 
+\f1\i next
+\f0\i0  and next to 
+\f1\i cur
+\f0\i0 .\
+\
+We can now simply repeat these steps for each index 
+\f1\i i 
+\f0\i0 in cost[] - sourcing the minimum cost for each step from the minimum of the following 2 costs we have stored:\
+\
+ 	
+\f2 int cur =cost[i]+Math.min(next,next2);\
+           next2 = next;\
+           next = cur;  
+\f0 \
+\
+}
