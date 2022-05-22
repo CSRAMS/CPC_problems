@@ -1,5 +1,0 @@
-Jump Game II:
-
-Valid but naive solution (almost certainly a better way):
-
-We start from the back of the array, and iterate to the front, storing the mimimum number of jumps to reach the end as we go.  If a position is not within direct reach of the end, we look at all positions that are in range, and take the minimum jumps to the end out of those.   
