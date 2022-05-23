@@ -14,6 +14,7 @@ xmax1 = max(r1[0],r1[2])
 xmax2 = max(r2[0],r2[2])
 uhbound = min(xmax1,xmax2)
 
+xmin1 = min(r1[0],r1[2])
 xmin2 = min(r2[0],r2[2])
 lhbound = max(xmin1,xmin2)
 
