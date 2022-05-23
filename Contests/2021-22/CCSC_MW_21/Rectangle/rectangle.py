@@ -1,53 +1,31 @@
-class Rect:
-    def __init__(self, x1, y1, x2, y2):
-        if x1 > x2:
-            self.right = x1
-            self.left = x2
-        else: # x1 < x2
-            self.right = x2
-            self.left = x1
-        
-        if y1 > y2:
-            self.top = y1
-            self.bottom = y2
-        else: # y1 < y2
-            self.top = y2
-            self.bottom = y1
+dx = (input().split(' '))
+dy = (input().split(' '))
 
-x_overlap = 0
-y_overlap = 0
+r1 = list()
+r2 = list()
 
-x1, y1, x2, y2 = [int(i) for i in input().split()]
-r1 = Rect(x1, y1, x2, y2)
+for i in dx:
+    r1.append(int(i))
 
-x1, y1, x2, y2 = [int(i) for i in input().split()]
-r2 = Rect(x1, y1, x2, y2)
+for i in dy:
+    r2.append(int(i))
 
-if r1.right > r2.left and r1.right < r2.right:
-    if r1.left >= r2.left:
-        x_overlap = r1.right - r1.left
-    else:
-        x_overlap = r1.right - r2.left
-elif r2.right > r1.left and r2.right < r1.right:
-    if r2.left >= r1.left:
-        x_overlap = r2.right - r2.left
-    else:
-        x_overlap = r2.right - r1.left
-else: # no overlap
-    x_overlap = 0
+xmax1 = max(r1[0],r1[2])
+xmax2 = max(r2[0],r2[2])
+uhbound = min(xmax1,xmax2)
 
-if r1.top > r2.bottom and r1.top < r2.top:
-    if r1.bottom >= r2.bottom:
-        y_overlap = r1.top - r1.bottom
-    else:
-        y_overlap = r1.top - r2.bottom
-elif r2.top > r1.bottom and r2.top < r1.top:
-    if r2.bottom >= r1.bottom:
-        y_overlap = r2.top - r2.bottom
-    else:
-        y_overlap = r2.top - r1.bottom
-else: # no overlap
-    y_overlap = 0
+xmin2 = min(r2[0],r2[2])
+lhbound = max(xmin1,xmin2)
 
-# print(x_overlap, y_overlap)
-print(x_overlap * y_overlap)
+ymax1 = max(r1[1],r1[3])
+ymax2 = max(r2[1],r2[3])
+uvbound = min(ymax1,ymax2)
+
+ymin1 = min(r1[1],r1[3])
+ymin2 = min(r2[1],r2[3])
+lvbound = max(ymin1,ymin2)
+
+if (uhbound<=lhbound or uvbound<=lvbound):
+    print(0)
+else:
+    print(abs(uhbound-lhbound)*abs(uvbound-lvbound))
