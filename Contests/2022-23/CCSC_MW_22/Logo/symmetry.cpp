@@ -3,41 +3,30 @@ using namespace std;
 
 #define nl '\n'
 
-ostream& operator<< (ostream &os, const vector<bool> v) {
-  os << v[0];
-  for (auto it = v.begin()+1; it != v.end(); ++it) {
-    os << ' ' << *it;
-  }
-
-  return os;
-}
-
 bool solve() {
-  int n, rows;
-  vector<vector<bool>> logo;
+  // Read in data {{{
+  int n;
 
   cin >> n;
+  auto logo = vector<vector<bool>>(n, vector<bool>(n, false));
 
-  logo = vector<vector<bool>>(n, vector<bool>(n, false));
   string s;
   for(auto it = logo.begin(); it != logo.end(); ++it) {
     cin >> s;
-    for (int i = 0; i < n; i++) if (s[i] == '1') (*it)[i] = true;
+    for (int i = 0; i < n; i++)
+      if (s[i] == '1') (*it)[i] = true;
   }
+  // }}}
 
-  rows = n / 2;
-  vector<bool> r1, r2;
-  for (int i = 0; i < rows; i++) {
-    r1 = *(logo.begin() + i);
-    r2 = *(logo.rbegin() + i);
+  for (int i = 0; i < n / 2; i++) { // We only need to check half the rows, rounded down
     for (int j = 0; j < n; j++) {
-      if (r1[j] != r2[j]) return false;
+      if (logo[i][j] != logo[n-1-i][j]) return false;
     }
   }
 
-  for (int j = 1; j <= rows; j++) {
+  for (int j = 0; j < n / 2; j++) { // We only need to check half the cols, rounded down
     for (int i = 0; i < n; i++) {
-      if (logo[i][j-1] != logo[i][n-j]) return false;
+      if (logo[i][j] != logo[i][n-1-j]) return false;
     }
   }
 
@@ -50,10 +39,6 @@ int main() {
 
   int t;
   for (cin >> t; t > 0; t--) {
-    if (solve()) {
-      cout << "YES" << nl;
-    } else {
-      cout << "NO" << nl;
-    }
+    cout << (solve() ? "YES" : "NO") << nl;
   }
 }
