@@ -1,2 +1,2 @@
-**Problem Topics**: Dynamic Programming
+**Problem Topics**: Dynamic Programming  
 **Problem Difficulty Estimate**: Easy
